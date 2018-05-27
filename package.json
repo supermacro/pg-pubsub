@@ -1,0 +1,28 @@
+{
+  "name": "pg-pubsub",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node ./build/index.js",
+    "migrate": "RUNNING_MIGRATION=true NODE_ENV=development knex migrate:latest",
+    "migrate:make": "knex migrate:make"
+  },
+  "author": "Giorgio Delgado",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/body-parser": "^1.17.0",
+    "@types/express": "^4.11.1",
+    "@types/knex": "^0.14.14",
+    "@types/node": "^10.1.2",
+    "@types/pg": "^7.4.9",
+    "typescript": "^2.8.3"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "knex": "^0.14.6",
+    "pg": "^7.4.3"
+  }
+}

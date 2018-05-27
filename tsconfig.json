@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "lib": [
+      "es5",
+      "es2015",
+      "es2016"
+    ],
+    "outDir": "build",
+    "moduleResolution": "node"
+  },
+  "exclude": ["node_modules"]
+}
