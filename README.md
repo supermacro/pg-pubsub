@@ -63,6 +63,15 @@ INSERT INTO db_events (channel, payload)
 VALUES ('sms', '{ "msg": "yoloooo!" }')
 ```
 
+> Any messages with the channel set to "sms" should log a string to stdout
+
+```
+> Twilio: sending sms
+```
+
+This is because this example, hooks up a subscriber inside the node runtime for all `sms` messages coming from PostgreSQL.
+
+
 ## Connecting to the db
 
 Info can be found in the `Docker-compose.yml` file.
