@@ -75,3 +75,21 @@ POSTGRES_DB: 'my_db'
 ```
 
 The db is exposed on port 15432.
+
+## Structure
+
+**Implementing the "Pub" in Pub / Sub**
+
+The `migrations` folder contains the schemas / triggers / and SQL functions necessary to implement the publishing aspect of the system.
+
+More specifically, there's a `db_events` table which stores messages sent into the pub sub system. Further, there is a trigger made that executes a sql function on any insertion into the `db_events`.
+
+
+**Implementing the "Sub" in Pub / Sub**
+
+Inside `src/services/client.ts`, I use the `pg` module to:
+
+1. Connect to the db
+2. Listen to "pub_sub" events being invoked from within postgres (which I've defined in the migrations)
+3. Invoke any asynchronous functions associated with the various events that can occur in the system.
+
