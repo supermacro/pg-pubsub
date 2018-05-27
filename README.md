@@ -69,7 +69,7 @@ VALUES ('sms', '{ "msg": "yoloooo!" }')
 > Twilio: sending sms
 ```
 
-This is because this example, hooks up a subscriber inside the node runtime for all `sms` messages coming from PostgreSQL.
+This is because this example hooks up a subscriber inside the node runtime for all `sms` messages coming from PostgreSQL.
 
 
 ## Connecting to the db
