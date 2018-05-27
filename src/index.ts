@@ -7,6 +7,15 @@ import { db } from './db'
 import { pubsub } from './services/client'
 import { twilioClient } from './services/subscriptions'
 
+// the docker node image exposes port 8080
+// and maps tcp connections
+// to port 80 in the vm
+// see Docker-compose.yml under server.ports
+const ports = {
+  host: 8080,
+  vm: 80
+}
+
 const init = async () => {
   const dbConnection = await db
 
@@ -36,7 +45,7 @@ const init = async () => {
     res.sendStatus(201)
   })
 
-  app.listen(80, () => console.log('Example app listening on port 3000!'))
+  app.listen(ports.vm, () => console.log(`Example app listening on port ${ports.host}!`))
 }
 
 init()
