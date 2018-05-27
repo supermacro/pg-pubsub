@@ -8,10 +8,9 @@ This repo implements a publish / subscribe system with zero dependancies (assumi
 
 ## Requirements
 
-In order to have this app run everywhere, and to make the running of the app itself as easy as possible, I wrapped the entire app (server + db) in docker, now this baby runs everywhere 😎
-
 [Docker](https://www.docker.com/); more specifically, the docker-compose cli ([link](https://docs.docker.com/compose/install/)), which I believe comes as part of the default Docker install.
 
+You don't need to have PostgreSQL or NodeJS installed.
 
 
 ## How to run the app
