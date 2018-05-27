@@ -82,6 +82,9 @@ export const pubsub = async (db) => {
       if (pl.channel === 'sms') {
         if (subscriptionManager['sms']) {
           Promise.all(subscriptionManager['sms'].map(f => f(pl)))
+          .then(() =>
+            pubSubConnection.query('DELETE FROM db_events WHERE id = $1', [pl.id])
+          )
         }
       }
     }
