@@ -1,5 +1,7 @@
 # NodeJS + PG Pubsub Example
 
+From https://gdelgado.ca/zero-dependancy-pub-sub-system-with-postgresql.html#title
+
 ```
 Who needs RabbitMQ? ;)
 ```
